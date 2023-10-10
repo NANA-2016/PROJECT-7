@@ -64,7 +64,28 @@ Apache server 2
 
    ![ssh apache server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/bf563794-21af-4360-8219-8da18a57c4b7)
 
-    On the above screen shots you can note the difference on the <public ip addresses>.
+    On the above screen shots you can note the difference on the <public ip addresses> on the SSH
+
+   sudo apt update -y &&  sudo apt install apache2 -y
+
+    the command above is used to install Apache2 server on both servers on both git and git terminus as used  below. 
+
+    Apache server 1
+
+    ![apache2 installation server 1](https://github.com/NANA-2016/PROJECT-7/assets/141503408/453f374c-5a61-4af0-91a9-8e7d7615d6fc)
+
+     Apache server 2
+
+     ![apache2 innstallation server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/c40029f8-1def-41ad-ae16-a0a82d619300)
+
+
+     
+
+     
+
+ 
+
+    
 
 
    
