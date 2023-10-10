@@ -148,6 +148,63 @@ For both servers , we need to configure the server to port 800 hencr we add  a d
   ![webconnection server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/96c75b1a-73ae-46dc-9833-a99489a2fef6)
 
 
+ ## step 5 
+ 
+ ## Configuring Nginx as a load balancer .
+
+  The first step is to set up an AWS instance on where you will be able to ssh to the server using the public IP address.
+
+  ![aws nginx server set up](https://github.com/NANA-2016/PROJECT-7/assets/141503408/0f40bae1-76d0-4ed5-8ca1-e0b5da81e540)
+
+ Shown below is a screen shot of setting up nginx server on the terminal.
+
+  ![ssh nginx](https://github.com/NANA-2016/PROJECT-7/assets/141503408/52b0f405-67bd-4e72-8981-d3350237d00e)
+
+  Later you need to install the nginx server and ensure it is active and running using the command 
+  
+  'sudo apt update -y && sudo apt install nginx -y' the green highlighted text  shows nginx is  active and running .
+
+![image](https://github.com/NANA-2016/PROJECT-7/assets/141503408/c6c50de4-50e9-4c2e-a50e-1aa42fe2b987)
+
+  
+
+    Using the command 'sudo vi /etc/nginx/conf.d/loadbalancer.conf' open nginx configuration file and copy the code below to confuigure the file .
+
+            
+        upstream backend_servers {
+
+            # your are to replace the public IP and Port to that of your webservers
+            server 127.0.0.1:8000; # public IP and port for webserser 1
+            server 127.0.0.1:8000; # public IP and port for webserver 2
+
+        }
+
+        server {
+            listen 80;
+            server_name <your load balancer's public IP addres>; # provide your load balancers public IP address
+
+            location / {
+                proxy_pass http://backend_servers;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            }
+        }
+
+    After making any changes to nginx server , you always have to check if the configuration is correct  using sudo nginx -t 
+    
+    then if no errors noted, reload nginx to load the new changes made using  'sudo systemctl restart nginx' command.
+
+.
+
+    
+
+
+
+
+
+ 
+
   
 
  
