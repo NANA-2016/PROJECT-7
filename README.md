@@ -72,13 +72,13 @@ Apache server 2
 
     Apache server 1  
 
-   ![apache2 installation server 1](https://github.com/NANA-2016/PROJECT-7/assets/141503408/9dc74337-4c54-4c5e-9be4-10b298fef583)
+  ![apache2 installation server 1](https://github.com/NANA-2016/PROJECT-7/assets/141503408/9dc74337-4c54-4c5e-9be4-10b298fef583)
 
 
    
      Apache server 2
 
-   ![apache2 innstallation server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/c40029f8-1def-41ad-ae16-a0a82d619300)
+   ![apache2 installation server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/c40029f8-1def-41ad-ae16-a0a82d619300)
 
     After using 'sudo systemctl status apache2' to ensure Apache2 is running , we move on to the next step.
 
@@ -191,10 +191,19 @@ For both servers , we need to configure the server to port 800 hencr we add  a d
             }
         }
 
-    After making any changes to nginx server , you always have to check if the configuration is correct  using sudo nginx -t 
+    After making any changes to nginx server , you always have to check if the configuration is correct  using 'sudo nginx -t '
     
     then if no errors noted, reload nginx to load the new changes made using  'sudo systemctl restart nginx' command.
+    
+ ![nginx server configuration (3)](https://github.com/NANA-2016/PROJECT-7/assets/141503408/2444f74d-335e-4524-b318-430c7a0fc308)
+   
+ When you go to the web using the Public ip address of nginx loadbalncer you get same web pages as the web servers. 
 
+![nginx load balancer webpage](https://github.com/NANA-2016/PROJECT-7/assets/141503408/8a49598c-56f7-4675-a7cd-02de5e666c37)
+
+
+
+  
 .
 
     
