@@ -66,7 +66,7 @@ Apache server 2
 
     On the above screen shots you can note the difference on the <public ip addresses> on the SSH
 
-   sudo apt update -y &&  sudo apt install apache2 -y
+   'sudo apt update -y &&  sudo apt install apache2 -y'
 
     the command above is used to install Apache2 server on both servers on both git and git terminus as used  below. 
 
@@ -79,6 +79,33 @@ Apache server 2
      Apache server 2
 
    ![apache2 innstallation server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/c40029f8-1def-41ad-ae16-a0a82d619300)
+
+    After using 'sudo systemctl status apache2' to ensure Apache2 is running , we move on to the next step.
+
+    ## Step 4
+    
+For both servers , we need to configure the server to port 800 hencr we add  a directive 'Listen to port 8000. as shown below using command .
+
+ 'sudo vi /etc/apache2/ports.conf '(using the nano or vi editor is ok)
+
+ For Apache server 1 vi editor has been used
+ 
+ ![directive addition for conf Listen 8000 server 1](https://github.com/NANA-2016/PROJECT-7/assets/141503408/b06269b2-e058-4dc1-8de1-8acc1b463713)
+
+ For Apache server 2nano editor has been used.
+ 
+ ![directive addition for conf Listen 8000 server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/f407fe1a-af8d-42cd-8c1f-c4f5c1d1f8da)
+
+
+ 
+ 
+
+
+ 
+
+    
+
+   
 
 
      
