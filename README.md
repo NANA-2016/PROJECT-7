@@ -96,6 +96,79 @@ For both servers , we need to configure the server to port 800 hencr we add  a d
  
  ![directive addition for conf Listen 8000 server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/f407fe1a-af8d-42cd-8c1f-c4f5c1d1f8da)
 
+  Listen 8000 on both configurations have been added as port directives 
+  
+
+   Last we need to open a default file in Apache2 server and change the default port 80 to 8000 on the virtual host after which we
+   
+   need to restart apache to reload the changes made .
+
+ ![conf of port on defaul file sites available server 1](https://github.com/NANA-2016/PROJECT-7/assets/141503408/e50abcd6-b90d-4ca9-b5d6-3d9ea41b8a74)
+
+ ![conf of port on defaul file sites available server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/98f023d2-2376-4011-bca0-1ff0a0ed785c)
+
+  Later a new file index.html is opened on both servers using the 'sudo vi index.html'  command 
+  
+  and code below where you will later       
+  
+  <!DOCTYPE html>
+        <html>
+        <head>
+            <title>My EC2 Instance</title>
+        </head>
+        <body>
+            <h1>Welcome to my EC2 instance</h1>
+            <p>Public IP: YOUR_PUBLIC_IP</p>
+        </body>
+        </html>
+
+
+  
+  
+  change the file ownership using 'sudo chown www-data:www-data ./index.html' command 
+  
+  'sudo cp -f ./index.html /var/www/html/index.html will be used to replace the default html file.
+  
+ and reload the apache2 load the new changes made  using 'sudo systemctl restart apache2'
+
+  ALL THE STEPS ARE SHOWN BELOW ON EACH SERVER .
+
+   Apache server 1
+
+   ![configure Apache2 server  1](https://github.com/NANA-2016/PROJECT-7/assets/141503408/82561996-e633-4575-a63f-9bbd1913f8e2)
+
+   Apache server 2
+
+   ![configure apache2 server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/bcd8facc-ad6f-45f9-8e23-a8f6762e01cc)
+
+   The end result at the browser is as shown below  for both servers.
+
+  ![web connection server 1](https://github.com/NANA-2016/PROJECT-7/assets/141503408/b0b2e1fb-2e70-472c-bda7-5dc862ac8a04)
+
+  ![webconnection server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/96c75b1a-73ae-46dc-9833-a99489a2fef6)
+
+
+  
+
+ 
+
+
+    
+
+
+
+   
+
+
+ 
+
+    
+   
+
+
+
+   
+
 
  
  
