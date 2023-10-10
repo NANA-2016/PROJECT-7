@@ -48,6 +48,29 @@ Apache server 2
 
 ![port 8000 server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/2061fb9b-7f43-4f45-bbfc-3ea869e3f3d8)
 
+ ## Step 3
+
+ Install Apache webserver 
+
+  These is done by installing Apache software on both servers.
+
+   We do  nreed to comnnect each webserver to aws instance by ssh -1 <PEM KEY> ubuntu@<public ip adress of the instance >
+
+   Apache server 1 ssh
+    
+![ssh apache server 1](https://github.com/NANA-2016/PROJECT-7/assets/141503408/75cb45fc-1fc5-4d4c-ab66-5a96c613ee89)
+ 
+   Apache server 2 ssh
+
+   ![ssh apache server 2](https://github.com/NANA-2016/PROJECT-7/assets/141503408/bf563794-21af-4360-8219-8da18a57c4b7)
+
+    On the above screen shots you can note the difference on the <public ip addresses>.
+
+
+   
+
+   
+
 
 
 
